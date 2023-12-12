@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ADAM Travel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="team" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <%- include('sidebar.ejs') %>
+    <div class="container-fluid">
+        <!-- Board Content -->
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">POST</h1>
+        <p class="mb-4">This is the list board.</p>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3-flex">
+                <div style="float: left;">
+                    <h6 class="m-0 font-weight-bold text-primary">게시글</h6>
+                </div>
+            </div>
+            <form action="/create" method="post" class="user">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="title" class="form-control" id="title" placeholder="Title...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="author" class="form-label">Author</label>
+                        <input type="text" name="author" class="form-control" id="author" placeholder="Author...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="desc" class="form-label">Description</label>
+                        <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+                    </div>
+
+                    <div class="card-header py-3-flex">
+                        <div style="float: right;">
+                            <input type="submit" class="btn float-right btn-warning btn-sm" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script src="js/custom.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark gray text */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container-fluid {
+            margin-top: 20px;
+        }
+
+        /* Navigation Bar Styles */
+        .menu-bg, .menu-burger, .menu-items {
+            /* Your styles for the navigation bar */
+        }
+
+        .menu-items {
+            /* Your styles for the navigation items */
+        }
+
+        .menu a {
+            /* Your styles for navigation links */
+        }
+
+        /* Page Content Styles */
+        .card {
+            margin-top: 20px;
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 8px;
+        }
+
+        .card-header {
+            background-color: #007bff; /* Blue header background */
+            color: #fff; /* White header text */
+        }
+
+        .form-label {
+            color: #333; /* Dark gray label text */
+            font-weight: bold;
+        }
+
+        .form-control {
+            border: 1px solid #ced4da; /* Light gray input border */
+        }
+
+        .btn-warning {
+            background-color: #ffc107; /* Yellow button background */
+            color: #333; /* Dark gray button text */
+            border: 1px solid #ffc107; /* Yellow button border */
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+            border: 1px solid #e0a800; /* Darker yellow border on hover */
+        }
+    </style>
+</body>
+</html>

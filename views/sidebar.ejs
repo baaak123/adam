@@ -1,0 +1,40 @@
+<!-- 매뉴바 -->
+<div class="menu-bg"></div>
+<div class="menu-burger">☰</div>
+<div class="menu-items">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-offset-2 col-md-4 col-sm-6">
+        <h1>Navigations</h1>
+         <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/board">Travel</a></li>
+            <li><a href="noticeboard">Board</a></li>
+            <li><a href="/question">Question</a></li>
+            <% if (name) { %>
+              <h3 style="color: rgb(255, 255, 255);">Welcome! <%= name %>님</h3>
+              <form action="/login" method="post">
+                  <button type="submit">로그아웃</button>
+              </form>
+          <% } else { %>
+              <h3 style="color: rgb(255, 255, 255);">Hi, GUEST</h3>
+              <form action="/login" method="get">
+                  <button type="submit">로그인</button>
+              </form>
+          <% } %>
+      </a>
+       </div>
+<!-- 오른쪽 -->
+       <div class="col-md-4 col-sm-6">
+         <address>
+           <h1>Our Studio</h1>
+           <p>Andong National University, <br> Andong-si, South Korea</p>
+           <div class="google-map">
+              <iframe src="https://www.google.com/maps/embed/v1/place?q=%EC%95%88%EB%8F%99%EB%8C%80%ED%95%99%EA%B5%90&key=AIzaSyBKeeMtN9jkef9pDyRpK4gkmBvFbeXRjME" allowfullscreen></iframe>
+           </div>
+         </address>
+       </div> 
+     </div>
+   </div>
+</div>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ADAM Travel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="team" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+
+<body>
+    <!-- 매뉴바 -->
+    <%- include('sidebar.ejs') %>
+    <section class="notice">
+        <div class="page-title">
+            <div class="container">
+                <h3>Write Anithing!</h3>
+            </div>
+        </div>
+        <div id="board-search">
+            <div class="container">
+                <div class="search-window">
+                    <form action="">
+                        <div class="search-wrap">
+                            <label for="search" class="blind">Search</label>
+                            <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
+                            <button type="submit" class="btn btn-dark">검색</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- board list area -->
+        <div id="board-list">
+            <div class="container">
+                <div style="float: right;">
+                    <a href="/create">
+                        <button type="button" float="right" class="btn float-right btn-warning btn-sm">Posting</button>
+                    </a>
+                </div>
+                <table class="board-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>DESCRIPTION</th>
+                            <th>AUTHOR</th>
+                            <th>DATE</th>
+                            <th>ETC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 0; i < articles.length ; i++){ %>
+                        <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= articles[i].title %></td>
+                            <td><%= articles[i].desc %></td>
+                            <td><%= articles[i].author %></td>
+                            <td><%= articles[i].updatedAt %></td>
+                            <td>
+                                <a href="/delete/<%= articles[i]._id %>" class="btn btn-danger btn-icon-split"
+                                    onclick="return deleteConfirm()">
+                                    <span class="icon text-white-50">
+                                        <i class="fa fa-trash fa-spin"></i>
+                                    </span>
+                                    <span class="text">Delete</span>
+                                </a>
+                                <a href="/<%= articles[i]._id %>" class="btn btn-success btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fa-brands fa-bootstrap"></i>
+                                    </span>
+                                    <span class="text">Edit</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
