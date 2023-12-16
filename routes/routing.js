@@ -28,6 +28,7 @@ const isNotLoggedIn = (req, res, next) => {
 router.get('/', (req, res) => res.render('index', { name: req.session['username'] }));
 router.get('/index', (req, res) => res.render('index', { name: req.session['username'] }));
 router.get('/board', (req, res) => res.render('board', { name: req.session['username'] }));
+router.get('/enjoy', (req, res) => res.render('enjoy', { name: req.session['username'] }));
 
 // 공지사항 게시판
 router.get('/noticeboard', async (req, res, next) => {
@@ -64,7 +65,6 @@ router.get('/delete/:id', async (req, res) => {
   await List.deleteOne({ _id: new ObjectId(req.params.id) });
   res.redirect('/noticeboard');
 });
-
 // 회원가입 페이지
 router.get('/register', isNotLoggedIn, (req, res) => res.render('register', { user: 'guest', name: req.session['username'] }));
 
@@ -90,13 +90,13 @@ router.post('/register', async (req, res) => {
 
   try {
     await newUser.save();
+    // 회원가입 성공 시 로그인 페이지로 리다이렉션
     res.redirect('/login');
   } catch (error) {
     console.error(error);
     res.redirect('/');
   }
 });
-
 // 로그인 처리
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;

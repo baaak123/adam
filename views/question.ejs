@@ -17,11 +17,11 @@
 <%- include('sidebar.ejs') %>
 
     <!-- 1:1 Inquiry Content -->
-    <section id="inquiry">
+    <section id="inquiry" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div class="inquiry-content">
+                    <div class="inquiry-content" style="text-align: center;">
                         <h1>1 : 1 문의</h1>
                         <p>문의사항을 적어주세요</p>
 
@@ -56,6 +56,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vegas.min.js"></script>
     <script src="js/custom.js"></script>
+    
     <style>
         /* Inquiry Form Styles */
         .inquiry-content {
@@ -64,11 +65,14 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
+            max-width: 600px; /* 변경된 부분 */
+            margin: 0 auto; /* 변경된 부분 */
         }
 
         .inquiry-form-container {
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
+            
         }
 
         .inquiry-form label {

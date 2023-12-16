@@ -8,18 +8,20 @@
         <h1>Navigations</h1>
          <ul class="menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/board">Travel</a></li>
+            <li><a href="/enjoy">Enjoy</a></li>
+            <li><a href="/board">Hotel</a></li>
+            <li><a href="#">Eats</a></li>
             <li><a href="noticeboard">Board</a></li>
             <li><a href="/question">Question</a></li>
             <% if (name) { %>
               <h3 style="color: rgb(255, 255, 255);">Welcome! <%= name %>님</h3>
-              <form action="/login" method="post">
-                  <button type="submit">로그아웃</button>
+              <form class="LoginButton" action="/login" method="post">
+                  <button type="submit">LogOut</button>
               </form>
           <% } else { %>
               <h3 style="color: rgb(255, 255, 255);">Hi, GUEST</h3>
               <form action="/login" method="get">
-                  <button type="submit">로그인</button>
+                  <button class="LoginButton" type="submit">Login</button>
               </form>
           <% } %>
       </a>

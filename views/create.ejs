@@ -22,15 +22,9 @@
     <div class="container-fluid">
         <!-- Board Content -->
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">POST</h1>
-        <p class="mb-4">This is the list board.</p>
+        <h1 class="h3 mb-2 text-gray-800">게시글 작성</h1>
 
         <div class="card shadow mb-4">
-            <div class="card-header py-3-flex">
-                <div style="float: left;">
-                    <h6 class="m-0 font-weight-bold text-primary">게시글</h6>
-                </div>
-            </div>
             <form action="/create" method="post" class="user">
                 <div class="card-body">
                     <div class="mb-3">
@@ -62,43 +56,28 @@
     <script src="js/vegas.min.js"></script>
     <script src="js/custom.js"></script>
     <style>
-        body {
+        .card shadow mb-4 {
             background-color: #f8f9fa; /* Light gray background */
-            color: #333; /* Dark gray text */
+            color: #ffffff; /* Dark gray text */
             font-family: 'Arial', sans-serif;
         }
 
         .container-fluid {
-            margin-top: 20px;
+            margin-top: 40px;
+            /* 상단 여백 설정 */
+            max-width: 1000px; /* 추가된 부분 */
+            margin: auto; /* 추가된 부분 */
+            transform: translate(0%, 50%);
+            background-color: #ffffff96;
         }
-
-        /* Navigation Bar Styles */
-        .menu-bg, .menu-burger, .menu-items {
-            /* Your styles for the navigation bar */
-        }
-
-        .menu-items {
-            /* Your styles for the navigation items */
-        }
-
-        .menu a {
-            /* Your styles for navigation links */
-        }
-
         /* Page Content Styles */
         .card {
             margin-top: 20px;
-            border: 1px solid #ddd; /* Light gray border */
+            border: 1px solid #ffffff00; /* Light gray border */
             border-radius: 8px;
         }
-
-        .card-header {
-            background-color: #007bff; /* Blue header background */
-            color: #fff; /* White header text */
-        }
-
         .form-label {
-            color: #333; /* Dark gray label text */
+            color: #000000; /* Dark gray label text */
             font-weight: bold;
         }
 
@@ -108,7 +87,7 @@
 
         .btn-warning {
             background-color: #ffc107; /* Yellow button background */
-            color: #333; /* Dark gray button text */
+            color: #ffffff; /* Dark gray button text */
             border: 1px solid #ffc107; /* Yellow button border */
         }
 

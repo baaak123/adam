@@ -469,7 +469,7 @@ http://www.templatemo.com/tm-521-get-ready
   }
   .page-title h3 {
     font-size: 28px;
-    color: #000000;
+    color: #ffffff;
     font-weight: 400;
     text-align: center;
   }
@@ -510,12 +510,12 @@ http://www.templatemo.com/tm-521-get-ready
   .board-table {
     font-size: 13px;
     width: 100%;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #383838;
+    border-bottom: 1px solid #3d3d3d;
   }
   
   .board-table a {
-    color: #ffffff;
+    color: #5c5c5c;
     display: inline-block;
     line-height: 1.4;
     word-break: break-all;
@@ -636,7 +636,7 @@ http://www.templatemo.com/tm-521-get-ready
   }
 
   #board-list {
-    background-color: rgba(206, 206, 206, 0.8); /* 배경색과 투명도 조절 가능 */
+    background-color: rgba(255, 255, 255, 0.904); /* 배경색과 투명도 조절 가능 */
     padding: 10px; /* 내용과의 간격을 조절할 수 있습니다. */
     border-radius: 10px; /* 모서리를 둥글게 만듭니다. */
     min-height: 800px;
@@ -645,7 +645,7 @@ http://www.templatemo.com/tm-521-get-ready
     margin: 0 auto; /* 수평으로 가운데 정렬 */
   }
   #login-container {
-    background-color: rgba(255, 255, 255, 0.8); /* 배경색과 투명도 조절 가능 */
+    background-color: rgba(117, 117, 117, 0.8); /* 배경색과 투명도 조절 가능 */
 
   }
 

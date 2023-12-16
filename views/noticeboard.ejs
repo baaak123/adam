@@ -24,7 +24,7 @@
     <section class="notice">
         <div class="page-title">
             <div class="container">
-                <h3>Write Anithing!</h3>
+                <h3>게시판</h3>
             </div>
         </div>
         <div id="board-search">
@@ -95,6 +95,85 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vegas.min.js"></script>
     <script src="js/custom.js"></script>
+    <style>
+        .page-title {
+            color: #fff; /* 텍스트 색상 */
+            padding: 20px;
+        }
+        
+        nav {
+            background-color: #555; /* 배경색 선택 */
+            padding: 10px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        
+        nav a:hover {
+            color: #ffcc00; /* 호버 색상 */
+        }
+        .search-wrap {
+            display: flex;
+        }
+        
+        #search {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .btn-dark {
+            background-color: #333;
+            color: #fff;
+        }
+        .board-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .board-table th, .board-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .board-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .board-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .board-table a {
+            margin-right: 5px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .btn-warning {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        
+        .btn-danger {
+            background-color: #d9534f;
+            color: #fff;
+        }
+        
+        .btn-success {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+        
+    </style>
 </body>
 
 </html>

@@ -21,7 +21,8 @@ app.set('views', path.resolve(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 // public 디렉터리에서 정적 파일 제공
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // 폼 데이터 처리를 위한 바디 파서 활성화
 app.use(express.urlencoded({ extended: false }));
